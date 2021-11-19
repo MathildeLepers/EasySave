@@ -1,0 +1,72 @@
+{
+time : 19/11/2021 10:45:54
+name : Test
+source : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\CER\
+destination : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Test
+taille : 340960 octets
+temps sauvegarde : 48,1289 ms
+}
+ 
+{
+time : 19/11/2021 10:48:18
+name : Test
+source : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\CER\
+destination : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Test
+taille : 340960 octets
+temps sauvegarde : 54,8751 ms
+}
+ 
+{
+time : 19/11/2021 10:59:04
+name : Test
+source : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\CER\
+destination : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Test
+taille : 340960 octets
+temps sauvegarde : 37,4872 ms
+}
+ 
+{
+time : 19/11/2021 11:14:00
+name : Test
+source : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\CER\
+destination : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Test
+taille : 340960 octets
+temps sauvegarde : 46,4652 ms
+}
+ 
+{
+time : 19/11/2021 11:17:40
+name : Test
+source : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\CER\
+destination : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Test
+taille : 340960 octets
+temps sauvegarde : 45,7148 ms
+}
+ 
+{
+time : 19/11/2021 11:18:04
+name : Test
+source : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\CER\
+destination : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Test
+taille : 340960 octets
+temps sauvegarde : 62,0267 ms
+}
+ 
+{
+time : 19/11/2021 12:09:08
+name : Test
+source : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\CER\
+destination : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Test
+taille : 340960 octets
+temps sauvegarde : 44,6746 ms
+}
+ 
+{
+time : 19/11/2021 12:09:42
+name : Test
+source : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\CER\
+destination : \Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Test
+taille : 340960 octets
+temps sauvegarde : 47,6897 ms
+}
+ 
