@@ -59,10 +59,6 @@ public class ModeleSauvegarde
         DirectoryInfo dir = new DirectoryInfo(sourceDirName);
         DirectoryInfo dest = new DirectoryInfo(destDirName);
 
-        if (dest.Exists)
-        {
-            Microsoft.VisualBasic.FileIO.FileSystem.DeleteDirectory(destDirName, Microsoft.VisualBasic.FileIO.DeleteDirectoryOption.DeleteAllContents);
-        }
 
         if (!dir.Exists)
         {
@@ -73,19 +69,23 @@ public class ModeleSauvegarde
 
         DirectoryInfo[] dirs = dir.GetDirectories();
 
-        // If the destination directory doesn't exist, create it.       
-        Directory.CreateDirectory(destDirName);
+        
+        if (!dest.Exists)
+        {
+            // If the destination directory doesn't exist, create it.       
+            Directory.CreateDirectory(destDirName);
+        }
 
         // Get the files in the directory and copy them to the new location.
         FileInfo[] files = dir.GetFiles();
         foreach (FileInfo file in files)
         {
-            Console.WriteLine(Sauvegarde.horodatage);
-            comp =  DateTime.Compare(file.LastWriteTime, Sauvegarde.horodatage);
-            if (comp > 0)
-            {
-                string tempPath = Path.Combine(destDirName, file.Name);
-                file.CopyTo(tempPath, false);
+           Console.WriteLine(Sauvegarde.horodatage);
+           comp =  DateTime.Compare(file.LastWriteTime, Sauvegarde.horodatage);
+           if (comp > 0)
+           {
+              string tempPath = Path.Combine(destDirName, file.Name);
+              file.CopyTo(tempPath, false);
             }
         }
 

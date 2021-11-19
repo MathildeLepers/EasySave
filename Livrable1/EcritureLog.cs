@@ -27,7 +27,6 @@ public class EcritureLog //class which write the logs
             {
                 writer.WriteLine("{");
                 writer.WriteLine("time : " + Sauvegarde.horodatage);
-                
                 writer.WriteLine("name : " + this.sauvegarde.appellation);
                 writer.WriteLine("source : " + this.source);
                 writer.WriteLine("destination : " + this.dest);
