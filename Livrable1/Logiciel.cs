@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Logiciel
+public class Logiciel //set the language and the number of backup 
 {
 	public Langue langue = new Langue();
 	public int nbTravaux;
