@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leper\\Documents\\CESI\\Informatique\\02-ProgrammationSysteme\\Livrable1\\Livrable1\\Livrable1.csproj",
+      "projectUniqueName": "C:\\Users\\leper\\Documents\\CESI\\Informatique\\02-ProgrammationSysteme\\Projet\\Livrable1\\Livrable1\\Livrable1.csproj",
       "projectName": "Livrable1",
-      "projectPath": "C:\\Users\\leper\\Documents\\CESI\\Informatique\\02-ProgrammationSysteme\\Livrable1\\Livrable1\\Livrable1.csproj",
+      "projectPath": "C:\\Users\\leper\\Documents\\CESI\\Informatique\\02-ProgrammationSysteme\\Projet\\Livrable1\\Livrable1\\Livrable1.csproj",
       "packagesPath": "C:\\Users\\leper\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leper\\Documents\\CESI\\Informatique\\02-ProgrammationSysteme\\Livrable1\\Livrable1\\obj\\",
+      "outputPath": "C:\\Users\\leper\\Documents\\CESI\\Informatique\\02-ProgrammationSysteme\\Projet\\Livrable1\\Livrable1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
