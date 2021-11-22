@@ -26,3 +26,5 @@ C:\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Projet\Livrab
 C:\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Projet\Livrable1\Livrable1\obj\Debug\netcoreapp3.1\Livrable1.dll
 C:\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Projet\Livrable1\Livrable1\obj\Debug\netcoreapp3.1\Livrable1.pdb
 C:\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Projet\Livrable1\Livrable1\obj\Debug\netcoreapp3.1\Livrable1.genruntimeconfig.cache
+C:\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Projet\Livrable1\Livrable1\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Projet\Livrable1\Livrable1\obj\Debug\netcoreapp3.1\Livrable1.csproj.CopyComplete
