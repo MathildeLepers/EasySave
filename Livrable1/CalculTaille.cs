@@ -18,7 +18,7 @@ public class CalculTaille
                 {
                     foreach (string file in Directory.GetFiles(folder)) //for each file in the repository
                     {
-                        this.nbFile = this.nbFile + 1;
+                        this.nbFile ++;
                         if (File.Exists(file)) //if the file exists 
                         {
                             FileInfo finfo = new FileInfo(file);
