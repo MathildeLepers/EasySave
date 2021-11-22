@@ -41,7 +41,6 @@ public class EcritureLog //class which write the logs
 
                 var options = new JsonSerializerOptions { WriteIndented = true };
                 string jsonString = System.Text.Json.JsonSerializer.Serialize(log, options);
-                Console.WriteLine(jsonString);
                 File.WriteAllText(@fileName, jsonString);
             }
         }
