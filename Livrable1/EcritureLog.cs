@@ -20,7 +20,7 @@ public class EcritureLog //class which write the logs
         this.source = fichierSource;
         this.dest = fichierDest;
         this.taille = this.sauvegarde.taille;
-        calculTemps = new CalculTemps(this.source, this.dest, Type.COMPLET);
+        calculTemps = new CalculTemps(this.sauvegarde, Type.COMPLET);
         this.temps = calculTemps.temps;
     }
     public void ecrire()

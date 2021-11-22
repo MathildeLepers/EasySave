@@ -7,8 +7,8 @@ public class Sauvegarde
 	public Etat etat = new Etat();
 	public int nbFichiersEligibles;
 	public float taille;
-	string source;
-	string dest;
+	public string source;
+	public string dest;
 	CalculTaille calculTaille = new CalculTaille();
 
 	public Sauvegarde(string appellationADonner, string source, string dest)
