@@ -8,6 +8,6 @@ public class RecupereDate
         string fileName = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Livrable1\Fichierlogs.txt";
         string[] lines = File.ReadAllLines(@fileName);
         int nblines = lines.Length;
-        return nblines;
+        return nblines - 7;
     }
 }
