@@ -6,14 +6,19 @@ public class Sauvegarde
 	public static DateTime horodatage;
 	public Etat etat = new Etat();
 	public int nbFichiersEligibles;
-	public int tailleFichiers;
+	public float taille;
+	string source;
+	string dest;
+	CalculTaille calculTaille = new CalculTaille();
 
-	public Sauvegarde(string appellationADonner, Etat etatADonner, int nbFichiersADonner, int tailleADonner)
+	public Sauvegarde(string appellationADonner, string source, string dest)
 	{
+		this.source = source;
+		this.dest = dest; 
 		this.appellation = appellationADonner;
 		horodatage = DateTime.Now;
-		this.etat = etatADonner;
-		this.nbFichiersEligibles = nbFichiersADonner;
-		this.tailleFichiers = tailleADonner;
-	}
+		this.etat = Etat.NONACTIF;
+		this.nbFichiersEligibles = calculTaille.nbFile;
+        this.taille = calculTaille.calculateFolderSize(this.source);
+    }
 }

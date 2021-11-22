@@ -3,6 +3,7 @@ using System.IO;
 
 public class CalculTaille
 {
+    public int nbFile = 0;
     public float calculateFolderSize(string folder) //calculates the size of the directory to be backed up and starts the backup
     {
         float folderSize = 0.0f; //initialize directory size to 0
@@ -17,6 +18,7 @@ public class CalculTaille
                 {
                     foreach (string file in Directory.GetFiles(folder)) //for each file in the repository
                     {
+                        this.nbFile = this.nbFile + 1;
                         if (File.Exists(file)) //if the file exists 
                         {
                             FileInfo finfo = new FileInfo(file);

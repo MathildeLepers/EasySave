@@ -5,4 +5,5 @@ public enum Etat
 	ENCOURS, 
 	ACTIF, 
 	NONACTIF,
+	END,
 }

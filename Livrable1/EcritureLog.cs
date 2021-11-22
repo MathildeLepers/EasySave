@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 public class EcritureLog //class which write the logs 
 {
-	public Sauvegarde sauvegarde = new Sauvegarde("Test", Etat.ACTIF, 10, 15); //CREER LA SAUVEGARDE EN ATTENDANT QUE LUILISATEUR LE FASSE
+    public Sauvegarde sauvegarde;//CREER LA SAUVEGARDE EN ATTENDANT QUE LUILISATEUR LE FASSE
     public string source; 
     public string dest;
     public double taille;
@@ -16,9 +16,10 @@ public class EcritureLog //class which write the logs
 
     public EcritureLog(string fichierSource, string fichierDest)//construct a log with a source, a destination, a length and a time
     {
+        this.sauvegarde = new Sauvegarde("Test", fichierSource, fichierDest);
         this.source = fichierSource;
         this.dest = fichierDest;
-        this.taille = calculTaille.calculateFolderSize(this.source);
+        this.taille = this.sauvegarde.taille;
         calculTemps = new CalculTemps(this.source, this.dest, Type.COMPLET);
         this.temps = calculTemps.temps;
     }
