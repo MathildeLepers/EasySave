@@ -6,10 +6,10 @@ using Newtonsoft.Json;
 
 public class EcritureLog //class which write the logs 
 {
-    public Sauvegarde sauvegarde;//CREER LA SAUVEGARDE EN ATTENDANT QUE LUILISATEUR LE FASSE
+    public Sauvegarde sauvegarde;
     public string source; 
     public string dest;
-    public double taille;
+    public double tailleSource;
     public CalculTaille calculTaille = new CalculTaille();
     public CalculTemps calculTemps;
     public double temps;
@@ -19,7 +19,7 @@ public class EcritureLog //class which write the logs
         this.sauvegarde = new Sauvegarde("Test", fichierSource, fichierDest);
         this.source = fichierSource;
         this.dest = fichierDest;
-        this.taille = this.sauvegarde.taille;
+        this.tailleSource = this.sauvegarde.taille;
         calculTemps = new CalculTemps(this.sauvegarde);
         this.temps = calculTemps.temps;
     }
@@ -32,7 +32,7 @@ public class EcritureLog //class which write the logs
             log.Name = this.sauvegarde.appellation;
             log.Destination = this.dest;
             log.Source = this.source;
-            log.Taille = this.taille;
+            log.Taille = this.tailleSource;
             log.Temps = this.temps;
             string json = JsonConvert.SerializeObject(log);
 
