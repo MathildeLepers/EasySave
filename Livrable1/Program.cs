@@ -16,12 +16,13 @@ class Programm
             language = Console.ReadLine();
         }
 
-        if (language == "FR") {
+        if (language == "FR") 
+        {
             Logiciel software = new Logiciel(Langue.FRANCAIS);
             software.launch();
         }
 
-        if (language == "EN")
+        if (language == "ENG")
         {
             Logiciel software = new Logiciel(Langue.ENGLISH);
             software.launch();
