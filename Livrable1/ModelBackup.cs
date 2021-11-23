@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-public class ModeleSauvegarde
+public class ModelBackup
 {
     public int comp;
     public void SauvegardeComplete(string sourceDirName, string destDirName, bool copySubDirs)    

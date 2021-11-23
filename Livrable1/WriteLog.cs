@@ -5,24 +5,24 @@ using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using System.Collections.Generic;   
 
-public class EcritureLog //class which write the logs 
+public class WriteLog //class which write the logs 
 {
     public Sauvegarde sauvegarde;
     public string source; 
     public string dest;
     public double tailleSource;
     public CalculSize calculTaille = new CalculSize();
-    public CalculTemps calculTemps;
+    public CalculTime calculTemps;
     public double temps;
     List<JSON> listJSON = new List<JSON>();
 
-    public EcritureLog(Sauvegarde backup)//construct a log with a source, a destination, a length and a time
+    public WriteLog(Sauvegarde backup)//construct a log with a source, a destination, a length and a time
     {
         this.sauvegarde = backup;
         this.source = this.sauvegarde.source;
         this.dest = this.sauvegarde.dest;
         this.tailleSource = this.sauvegarde.taille;
-        calculTemps = new CalculTemps(this.sauvegarde);
+        calculTemps = new CalculTime(this.sauvegarde);
         this.temps = calculTemps.temps;
     }
     public void ecrire()

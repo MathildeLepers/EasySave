@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Logiciel //set the language and the number of backup 
+public class Software //set the language and the number of backup 
 {
 	public Langue language = new Langue();
 	public int nbBackup;
@@ -10,7 +10,7 @@ public class Logiciel //set the language and the number of backup
 	public Sauvegarde backup;
 
 
-	public Logiciel(Langue languageChosen)
+	public Software(Langue languageChosen)
 	{
 		this.language = languageChosen;
 	}
@@ -55,8 +55,8 @@ public class Logiciel //set the language and the number of backup
 			}
 		}
 
-		EcritureLog log = new EcritureLog(this.backup);
-		EcritureFichier fichier = new EcritureFichier(this.backup);
+		WriteLog log = new WriteLog(this.backup);
+		WriteFile fichier = new WriteFile(this.backup);
 
 
 		fichier.ecrire();

@@ -4,7 +4,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 
-public class EcritureFichier
+public class WriteFile
 {
     public Sauvegarde sauvegarde;
     public string source;
@@ -13,7 +13,7 @@ public class EcritureFichier
     public float tailleDest;
     CalculSize calculTaille = new CalculSize();
     public int nbFiles;
-    public EcritureFichier(Sauvegarde sauvegarde)//construct a log with a source, a destination, a length and a time
+    public WriteFile(Sauvegarde sauvegarde)//construct a log with a source, a destination, a length and a time
     {
         this.sauvegarde = sauvegarde;
         this.source = this.sauvegarde.source;

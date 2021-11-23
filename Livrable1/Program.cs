@@ -18,13 +18,13 @@ class Programm
 
         if (language == "FR") 
         {
-            Logiciel software = new Logiciel(Langue.FRANCAIS);
+            Software software = new Software(Langue.FRANCAIS);
             software.launch();
         }
 
         if (language == "ENG")
         {
-            Logiciel software = new Logiciel(Langue.ENGLISH);
+            Software software = new Software(Langue.ENGLISH);
             software.launch();
         }
 
