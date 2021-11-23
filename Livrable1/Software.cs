@@ -31,20 +31,23 @@ public class Software //set the language and the number of backup
 				this.nbBackup = Int32.Parse(Console.ReadLine());
 			}
 
-			this.fileSource = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\CER\";
-			this.fileDest = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Test";
+			Console.WriteLine("Where is your source folder ?");
+			this.fileSource = Console.ReadLine();
+			Console.WriteLine("Where is your destination folder ?");
+			this.fileDest = Console.ReadLine();
+
 
 			for (int i = 0; i < nbBackup; i++)
 			{
 				Console.WriteLine("How do you wanna name your " + (i + 1) + " backup");
 				this.name = Console.ReadLine();
 
-				this.backup = new Backup(this.name, this.fileSource, this.fileDest);
+				this.backup = new Backup(this.name, @fileSource, @fileDest);
 
 				WriteLog log = new WriteLog(this.backup);
 	
 				this.backup.state = State.INPROGRESS;
-				model.CompleteBackup(this.fileSource, this.fileDest, true);
+				model.CompleteBackup(@fileSource, @fileDest, true);
 				this.backup.state = State.END;
 				this.backup.time = model.time;
 				log.ecrire();
@@ -62,21 +65,24 @@ public class Software //set the language and the number of backup
 				this.nbBackup = Int32.Parse(Console.ReadLine());
 			}
 
-			this.fileSource = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\CER\";
-			this.fileDest = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Test";
+			Console.WriteLine("Ou se situe votre dossier source ?");
+			this.fileSource = Console.ReadLine();
+			Console.WriteLine("Ou se situe votre dossier destinataire ?");
+			this.fileDest = Console.ReadLine();
+
 
 			for (int i = 0; i < nbBackup; i++)
             {
 				Console.WriteLine("Comment voulez vous appeler votre " + (i+1) + "éme sauvegarde");
 				this.name = Console.ReadLine();
-				this.backup = new Backup(this.name, this.fileSource, this.fileDest);
+				this.backup = new Backup(this.name, @fileSource, @fileDest);
 
 				WriteLog log = new WriteLog(this.backup);
 				this.fichier = new WriteFile(this.backup);
 				listJSON.Add(fichier.log);
 
 				this.backup.state = State.INPROGRESS; 
-				model.CompleteBackup(this.fileSource, this.fileDest, true);
+				model.CompleteBackup(@fileSource, @fileDest, true);
 				this.backup.state = State.END;
 				this.backup.time = model.time;
 				log.ecrire();
