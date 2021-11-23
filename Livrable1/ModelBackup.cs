@@ -52,7 +52,9 @@ public class ModelBackup
                 CompleteBackup(subdir.FullName, tempPath, copySubDirs);
             }
         }
+        
         sw.Stop(); //stop counter 
         this.time = sw.Elapsed.TotalMilliseconds;//stop counter and return time use to do the backup
+        Console.WriteLine(this.time);
     }
 }

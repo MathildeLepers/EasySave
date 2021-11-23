@@ -32,7 +32,7 @@ public class WriteLog //class which write the logs
             log.Destination = this.dest;
             log.Source = this.source;
             log.Taille = this.sizeSource;
-            log.Temps = this.time;
+            log.Temps = this.backup.time;
 
             string json = JsonConvert.SerializeObject(log);
 
