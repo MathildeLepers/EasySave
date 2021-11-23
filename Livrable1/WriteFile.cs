@@ -20,41 +20,39 @@ public class WriteFile
         this.dest = this.backup.dest;
         this.sizeSource = this.backup.taille;
         this.sizeDest = calculSize.calculateFolderSize(this.dest);
+        this.nbFiles = calculSize.nbFile;
+        Console.WriteLine(this.backup.nbFiles);
     }
 
     public void ecrire()
     {
-        Console.WriteLine(this.backup.state);
-        while (this.backup.state == State.INPROGRESS)
+       
+        try
         {
-            this.sizeDest = calculSize.calculateFolderSize(this.dest);
-            this.nbFiles = calculSize.nbFile;
-            try
-            {
-                JSONFile log = new JSONFile();
-                log.Time = this.backup.date;
-                log.Name = this.backup.name;
-                log.Destination = this.dest;
-                log.Source = this.source;
-                log.State = this.backup.state;
-                log.Size = this.backup.taille;
-                log.NbFiles = this.backup.nbFiles;
-                log.NbFilesLeft = this.backup.nbFiles - this.nbFiles;
-                log.SizeFilesLeft = this.sizeSource - this.sizeDest;
+            JSONFile log = new JSONFile();
+            log.Time = this.backup.date;
+            log.Name = this.backup.name;
+            log.Destination = this.dest;
+            log.Source = this.source;
+            log.State = this.backup.state;
+            log.Size = this.sizeSource;
+            log.NbFiles = this.backup.nbFiles;
+            log.NbFilesLeft = this.backup.nbFiles - this.nbFiles;
+            log.SizeFilesLeft = this.sizeSource - this.sizeDest;
                 
-                string json = JsonConvert.SerializeObject(log);
+            string json = JsonConvert.SerializeObject(log);
 
-                string fileName = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Fichier.json";
-                {
-                    var options = new JsonSerializerOptions { WriteIndented = true };
-                    string jsonString = System.Text.Json.JsonSerializer.Serialize(log, options);
-                    File.WriteAllText(@fileName, jsonString);
-                }
-            }
-            catch (Exception exp)
+            string fileName = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Fichier.json";
             {
-                Console.Write(exp.Message);
+                var options = new JsonSerializerOptions { WriteIndented = true };
+                string jsonString = System.Text.Json.JsonSerializer.Serialize(log, options);
+                File.WriteAllText(@fileName, jsonString);
             }
         }
+        catch (Exception exp)
+        {
+            Console.Write(exp.Message);
+        }
+        
     }
 }
