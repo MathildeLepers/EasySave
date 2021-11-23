@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 public class Software //set the language and the number of backup 
 {
 	public Language language = new Language();
@@ -9,6 +9,8 @@ public class Software //set the language and the number of backup
 	public string name;
 	public Backup backup;
 	public ModelBackup model = new ModelBackup();
+	public List<JSONFile> listJSON = new List<JSONFile>();
+	public WriteFile fichier;
 
 
 	public Software(Language languageChosen)
@@ -40,13 +42,11 @@ public class Software //set the language and the number of backup
 				this.backup = new Backup(this.name, this.fileSource, this.fileDest);
 
 				WriteLog log = new WriteLog(this.backup);
-				WriteFile fichier = new WriteFile(this.backup);
 	
 				this.backup.state = State.INPROGRESS;
 				model.CompleteBackup(this.fileSource, this.fileDest, true);
 				this.backup.state = State.END;
 				this.backup.time = model.time;
-				fichier.ecrire();
 				log.ecrire();
 			}
 		}
@@ -72,17 +72,17 @@ public class Software //set the language and the number of backup
 				this.backup = new Backup(this.name, this.fileSource, this.fileDest);
 
 				WriteLog log = new WriteLog(this.backup);
-				WriteFile fichier = new WriteFile(this.backup);
+				this.fichier = new WriteFile(this.backup);
+				listJSON.Add(fichier.log);
 
 				this.backup.state = State.INPROGRESS; 
 				model.CompleteBackup(this.fileSource, this.fileDest, true);
 				this.backup.state = State.END;
 				this.backup.time = model.time;
-				fichier.ecrire();
 				log.ecrire();
 			}
 		}
-
+		fichier.ecrire(listJSON);
 	}
 
 }
