@@ -32,13 +32,13 @@ public class WriteLog //class which write the logs
             log.Destination = this.dest;
             log.Source = this.source;
             log.Taille = this.sizeSource;
-            log.Temps = this.time;
+            log.Temps = this.backup.time;
 
             string json = JsonConvert.SerializeObject(log);
 
             
 
-            string fileName = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\test.json";
+            string fileName = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Log.json";
             {
                 if (!File.Exists(fileName))
                 {

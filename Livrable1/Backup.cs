@@ -19,7 +19,7 @@ public class Backup //the class of the backup
 		this.name = nameToGive;
 		this.date = DateTime.Now;
 		this.state = State.NONACTIVE;
-		this.nbFiles = calculSize.nbFile;
 		this.taille = calculSize.calculateFolderSize(this.source);
-    }
+		this.nbFiles = calculSize.nbFile;
+	}
 }
