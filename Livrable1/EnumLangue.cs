@@ -3,5 +3,5 @@
 public enum Langue
 {
 	FRANCAIS,
-	ANGLAIS,
+	ENGLISH,
 }

@@ -16,11 +16,11 @@ public class EcritureLog //class which write the logs
     public double temps;
     List<JSON> listJSON = new List<JSON>();
 
-    public EcritureLog(string fichierSource, string fichierDest)//construct a log with a source, a destination, a length and a time
+    public EcritureLog(Sauvegarde backup)//construct a log with a source, a destination, a length and a time
     {
-        this.sauvegarde = new Sauvegarde("Test", fichierSource, fichierDest);
-        this.source = fichierSource;
-        this.dest = fichierDest;
+        this.sauvegarde = backup;
+        this.source = this.sauvegarde.source;
+        this.dest = this.sauvegarde.dest;
         this.tailleSource = this.sauvegarde.taille;
         calculTemps = new CalculTemps(this.sauvegarde);
         this.temps = calculTemps.temps;
@@ -42,7 +42,6 @@ public class EcritureLog //class which write the logs
             
 
             string fileName = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\test.json";
-            DirectoryInfo dir = new DirectoryInfo(fileName);
             {
                 if (!File.Exists(fileName))
                 {

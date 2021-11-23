@@ -5,22 +5,28 @@ class Programm
 {
     static void Main()
     {
-        // Copy from the current directory, include subdirectories.
-        ModeleSauvegarde modele = new ModeleSauvegarde();
 
-        Console.WriteLine("Fichier source ? : ");
-        string fichierSource = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\CER\";
-        Console.WriteLine("Fichier destination ? : ");
-        string fichierDest = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Test";
-
-        EcritureLog log = new EcritureLog(fichierSource, fichierDest);
-        EcritureFichier fichier = new EcritureFichier(new Sauvegarde("Test", fichierSource, fichierDest));
+        Console.WriteLine("Which language do you want to choose? FR or ENG ?");
+        string language = Console.ReadLine();
 
 
-        fichier.ecrire();
+        while (language != "FR" & language != "ENG")
+        {
+            Console.WriteLine("Which language do you want to choose? FR or ENG ?");
+            language = Console.ReadLine();
+        }
 
+        if (language == "FR") {
+            Logiciel software = new Logiciel(Langue.FRANCAIS);
+            software.launch();
+        }
 
-        log.ecrire();
+        if (language == "EN")
+        {
+            Logiciel software = new Logiciel(Langue.ENGLISH);
+            software.launch();
+        }
+
 
 
         // "\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\CER\"
