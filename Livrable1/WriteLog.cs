@@ -38,7 +38,7 @@ public class WriteLog //class which write the logs
 
             
 
-            string fileName = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\test.json";
+            string fileName = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Log.json";
             {
                 if (!File.Exists(fileName))
                 {
