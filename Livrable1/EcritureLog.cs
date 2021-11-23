@@ -3,6 +3,7 @@ using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
+using System.Collections.Generic;   
 
 public class EcritureLog //class which write the logs 
 {
@@ -13,6 +14,7 @@ public class EcritureLog //class which write the logs
     public CalculTaille calculTaille = new CalculTaille();
     public CalculTemps calculTemps;
     public double temps;
+    List<JSON> listJSON = new List<JSON>();
 
     public EcritureLog(string fichierSource, string fichierDest)//construct a log with a source, a destination, a length and a time
     {
@@ -34,14 +36,36 @@ public class EcritureLog //class which write the logs
             log.Source = this.source;
             log.Taille = this.tailleSource;
             log.Temps = this.temps;
+
             string json = JsonConvert.SerializeObject(log);
 
-            string fileName = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\test.json";
-            {
+            
 
-                var options = new JsonSerializerOptions { WriteIndented = true };
-                string jsonString = System.Text.Json.JsonSerializer.Serialize(log, options);
-                File.WriteAllText(@fileName, jsonString);
+            string fileName = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\test.json";
+            DirectoryInfo dir = new DirectoryInfo(fileName);
+            {
+                if (!File.Exists(fileName))
+                {
+                    listJSON.Add(log);
+                    var options = new JsonSerializerOptions { WriteIndented = true };
+                    string jsonString = System.Text.Json.JsonSerializer.Serialize(listJSON, options);
+                    File.WriteAllText(@fileName, jsonString);
+                }
+                else
+                {
+                    StreamReader r = new StreamReader(fileName);
+                    string jsonString2 = r.ReadToEnd();
+                    r.Close();
+                    List<JSON> m = JsonConvert.DeserializeObject<List<JSON>>(jsonString2);
+                    m.Add(log);
+                    var options = new JsonSerializerOptions { WriteIndented = true };
+                    string jsonString3 = System.Text.Json.JsonSerializer.Serialize(m, options);
+                    File.WriteAllText(@fileName, jsonString3);
+                }
+                
+
+
+
             }
         }
         catch (Exception exp)
