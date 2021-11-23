@@ -2,7 +2,7 @@
 
 public class Software //set the language and the number of backup 
 {
-	public Langue language = new Langue();
+	public Language language = new Language();
 	public int nbBackup;
 	public string fileSource;
 	public string fileDest;
@@ -10,14 +10,14 @@ public class Software //set the language and the number of backup
 	public Backup backup;
 
 
-	public Software(Langue languageChosen)
+	public Software(Language languageChosen)
 	{
 		this.language = languageChosen;
 	}
 
 	public void launch()
     {
-		if (this.language == Langue.ENGLISH)
+		if (this.language == Language.ENGLISH)
 		{
 			Console.WriteLine("How many backup do you want to realize? (max 5)");
 			this.nbBackup = Int32.Parse(Console.ReadLine());
@@ -36,7 +36,7 @@ public class Software //set the language and the number of backup
 			}
 		}
 
-		if (this.language == Langue.FRANCAIS)
+		if (this.language == Language.FRANCAIS)
         {
 			Console.WriteLine("Combien de sauvegardes voulez vous réaliser?");
 			this.nbBackup = Int32.Parse(Console.ReadLine());

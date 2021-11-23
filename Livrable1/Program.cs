@@ -18,13 +18,13 @@ class Programm
 
         if (language == "FR") //if the language choosen is FR, launch the french software 
         {
-            Software software = new Software(Langue.FRANCAIS);
+            Software software = new Software(Language.FRANCAIS);
             software.launch();
         }
 
         if (language == "ENG") //if the language choosen is ENG, launch the english software 
         {
-            Software software = new Software(Langue.ENGLISH);
+            Software software = new Software(Language.ENGLISH);
             software.launch();
         }
 

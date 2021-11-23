@@ -1,6 +1,6 @@
 ﻿using System;
 
-public enum Etat //enum the differents states of the backup 
+public enum State //enum the differents states of the backup 
 {
 	INPROGRESS, 
 	NONACTIVE,

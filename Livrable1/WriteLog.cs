@@ -7,35 +7,34 @@ using System.Collections.Generic;
 
 public class WriteLog //class which write the logs 
 {
-    public Backup sauvegarde;
+    public Backup backup;
     public string source; 
     public string dest;
-    public double tailleSource;
-    public CalculSize calculTaille = new CalculSize();
-    public CalculTime calculTemps;
-    public double temps;
+    public double sizeSource;
+    public CalculTime calculTime;
+    public double time;
     List<JSON> listJSON = new List<JSON>();
 
     public WriteLog(Backup backup)//construct a log with a source, a destination, a length and a time
     {
-        this.sauvegarde = backup;
-        this.source = this.sauvegarde.source;
-        this.dest = this.sauvegarde.dest;
-        this.tailleSource = this.sauvegarde.taille;
-        calculTemps = new CalculTime(this.sauvegarde);
-        this.temps = calculTemps.temps;
+        this.backup = backup;
+        this.source = this.backup.source;
+        this.dest = this.backup.dest;
+        this.sizeSource = this.backup.taille;
+        calculTime = new CalculTime(this.backup);
+        this.time = calculTime.time;
     }
     public void ecrire()
     {
         try
         {
             JSON log = new JSON();
-            log.Time = this.sauvegarde.time;
-            log.Name = this.sauvegarde.name;
+            log.Time = this.backup.time;
+            log.Name = this.backup.name;
             log.Destination = this.dest;
             log.Source = this.source;
-            log.Taille = this.tailleSource;
-            log.Temps = this.temps;
+            log.Taille = this.sizeSource;
+            log.Temps = this.time;
 
             string json = JsonConvert.SerializeObject(log);
 

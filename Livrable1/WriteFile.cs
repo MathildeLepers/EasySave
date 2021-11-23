@@ -6,41 +6,41 @@ using Newtonsoft.Json;
 
 public class WriteFile
 {
-    public Backup sauvegarde;
+    public Backup backup;
     public string source;
     public string dest;
-    public float tailleSource;
-    public float tailleDest;
-    CalculSize calculTaille = new CalculSize();
+    public float sizeSource;
+    public float sizeDest;
+    CalculSize calculSize = new CalculSize();
     public int nbFiles;
-    public WriteFile(Backup sauvegarde)//construct a log with a source, a destination, a length and a time
+    public WriteFile(Backup backup)//construct a log with a source, a destination, a length and a time
     {
-        this.sauvegarde = sauvegarde;
-        this.source = this.sauvegarde.source;
-        this.dest = this.sauvegarde.dest;
-        this.tailleSource = this.sauvegarde.taille;
-        this.tailleDest = calculTaille.calculateFolderSize(this.dest);
+        this.backup = backup;
+        this.source = this.backup.source;
+        this.dest = this.backup.dest;
+        this.sizeSource = this.backup.taille;
+        this.sizeDest = calculSize.calculateFolderSize(this.dest);
     }
 
     public void ecrire()
     {
-        Console.WriteLine(this.sauvegarde.state);
-        while (this.sauvegarde.state == Etat.INPROGRESS)
+        Console.WriteLine(this.backup.state);
+        while (this.backup.state == State.INPROGRESS)
         {
-            this.tailleDest = calculTaille.calculateFolderSize(this.dest);
-            this.nbFiles = calculTaille.nbFile;
+            this.sizeDest = calculSize.calculateFolderSize(this.dest);
+            this.nbFiles = calculSize.nbFile;
             try
             {
                 JSONFile log = new JSONFile();
-                log.Time = this.sauvegarde.time;
-                log.Name = this.sauvegarde.name;
+                log.Time = this.backup.time;
+                log.Name = this.backup.name;
                 log.Destination = this.dest;
                 log.Source = this.source;
-                log.State = this.sauvegarde.state;
-                log.Size = this.sauvegarde.taille;
-                log.NbFiles = this.sauvegarde.nbFiles;
-                log.NbFilesLeft = this.sauvegarde.nbFiles - this.nbFiles;
-                log.SizeFilesLeft = this.tailleSource - this.tailleDest;
+                log.State = this.backup.state;
+                log.Size = this.backup.taille;
+                log.NbFiles = this.backup.nbFiles;
+                log.NbFilesLeft = this.backup.nbFiles - this.nbFiles;
+                log.SizeFilesLeft = this.sizeSource - this.sizeDest;
                 
                 string json = JsonConvert.SerializeObject(log);
 

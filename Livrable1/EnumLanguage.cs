@@ -1,6 +1,6 @@
 ﻿using System;
 
-public enum Langue //enum the differents languages possible 
+public enum Language //enum the differents languages possible 
 {
 	FRANCAIS,
 	ENGLISH,

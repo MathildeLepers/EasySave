@@ -4,7 +4,7 @@ public class Backup //the class of the backup
 {
 	public string name;
 	public DateTime time;
-	public Etat state = new Etat();
+	public State state = new State();
 	public int nbFiles;
 	public float taille;
 	public string source;
@@ -17,7 +17,7 @@ public class Backup //the class of the backup
 		this.dest = dest; 
 		this.name = nameToGive;
 		this.time = DateTime.Now;
-		this.state = Etat.NONACTIVE;
+		this.state = State.NONACTIVE;
 		this.nbFiles = calculSize.nbFile;
         this.taille = calculSize.calculateFolderSize(this.source);
     }
