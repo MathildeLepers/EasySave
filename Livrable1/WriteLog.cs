@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 public class WriteLog //class which write the logs 
 {
-    public Sauvegarde sauvegarde;
+    public Backup sauvegarde;
     public string source; 
     public string dest;
     public double tailleSource;
@@ -16,7 +16,7 @@ public class WriteLog //class which write the logs
     public double temps;
     List<JSON> listJSON = new List<JSON>();
 
-    public WriteLog(Sauvegarde backup)//construct a log with a source, a destination, a length and a time
+    public WriteLog(Backup backup)//construct a log with a source, a destination, a length and a time
     {
         this.sauvegarde = backup;
         this.source = this.sauvegarde.source;
@@ -30,8 +30,8 @@ public class WriteLog //class which write the logs
         try
         {
             JSON log = new JSON();
-            log.Time = Sauvegarde.horodatage;
-            log.Name = this.sauvegarde.appellation;
+            log.Time = this.sauvegarde.time;
+            log.Name = this.sauvegarde.name;
             log.Destination = this.dest;
             log.Source = this.source;
             log.Taille = this.tailleSource;

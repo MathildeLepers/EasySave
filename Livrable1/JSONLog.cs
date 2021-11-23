@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class JSON
+public class JSON //the class of the log 
 {
 	public DateTimeOffset Time { get; set; }
 	public string Name { get; set; }

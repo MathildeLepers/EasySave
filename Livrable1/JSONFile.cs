@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class JSONFile
+public class JSONFile //the class of the unique file 
 {
 	public DateTimeOffset Time { get; set; }
 	public string Name { get; set; }

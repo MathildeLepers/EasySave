@@ -3,8 +3,8 @@ using System.IO;
 
 public class CalculSize
 {
-    public int nbFile = 0;
-    public float calculateFolderSize(string folder) //calculates the size of the directory to be backed up and starts the backup
+    public int nbFile = 0;//initialize number of file to 0
+    public float calculateFolderSize(string folder) //calculates the size of the directory to be backed up
     {
         float folderSize = 0.0f; //initialize directory size to 0
         try

@@ -7,7 +7,7 @@ public class Software //set the language and the number of backup
 	public string fileSource;
 	public string fileDest;
 	public string name;
-	public Sauvegarde backup;
+	public Backup backup;
 
 
 	public Software(Langue languageChosen)
@@ -32,7 +32,7 @@ public class Software //set the language and the number of backup
 			{
 				Console.WriteLine("How do you wanna name your " + (i + 1) + " backup");
 				this.name = Console.ReadLine();
-				this.backup = new Sauvegarde(this.name, this.fileSource, this.fileDest);
+				this.backup = new Backup(this.name, this.fileSource, this.fileDest);
 			}
 		}
 
@@ -51,7 +51,7 @@ public class Software //set the language and the number of backup
             {
 				Console.WriteLine("Comment voulez vous appeler votre " + (i+1) + "éme sauvegarde");
 				this.name = Console.ReadLine();
-				this.backup = new Sauvegarde(this.name, this.fileSource, this.fileDest);
+				this.backup = new Backup(this.name, this.fileSource, this.fileDest);
 			}
 		}
 

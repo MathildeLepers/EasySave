@@ -6,14 +6,14 @@ using Newtonsoft.Json;
 
 public class WriteFile
 {
-    public Sauvegarde sauvegarde;
+    public Backup sauvegarde;
     public string source;
     public string dest;
     public float tailleSource;
     public float tailleDest;
     CalculSize calculTaille = new CalculSize();
     public int nbFiles;
-    public WriteFile(Sauvegarde sauvegarde)//construct a log with a source, a destination, a length and a time
+    public WriteFile(Backup sauvegarde)//construct a log with a source, a destination, a length and a time
     {
         this.sauvegarde = sauvegarde;
         this.source = this.sauvegarde.source;
@@ -24,22 +24,22 @@ public class WriteFile
 
     public void ecrire()
     {
-        Console.WriteLine(this.sauvegarde.etat);
-        while (this.sauvegarde.etat == Etat.ENCOURS)
+        Console.WriteLine(this.sauvegarde.state);
+        while (this.sauvegarde.state == Etat.INPROGRESS)
         {
             this.tailleDest = calculTaille.calculateFolderSize(this.dest);
             this.nbFiles = calculTaille.nbFile;
             try
             {
                 JSONFile log = new JSONFile();
-                log.Time = Sauvegarde.horodatage;
-                log.Name = this.sauvegarde.appellation;
+                log.Time = this.sauvegarde.time;
+                log.Name = this.sauvegarde.name;
                 log.Destination = this.dest;
                 log.Source = this.source;
-                log.State = this.sauvegarde.etat;
+                log.State = this.sauvegarde.state;
                 log.Size = this.sauvegarde.taille;
-                log.NbFiles = this.sauvegarde.nbFichiersEligibles;
-                log.NbFilesLeft = this.sauvegarde.nbFichiersEligibles - this.nbFiles;
+                log.NbFiles = this.sauvegarde.nbFiles;
+                log.NbFilesLeft = this.sauvegarde.nbFiles - this.nbFiles;
                 log.SizeFilesLeft = this.tailleSource - this.tailleDest;
                 
                 string json = JsonConvert.SerializeObject(log);
