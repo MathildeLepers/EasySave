@@ -11,7 +11,7 @@ public class EcritureLog //class which write the logs
     public string source; 
     public string dest;
     public double tailleSource;
-    public CalculTaille calculTaille = new CalculTaille();
+    public CalculSize calculTaille = new CalculSize();
     public CalculTemps calculTemps;
     public double temps;
     List<JSON> listJSON = new List<JSON>();

@@ -11,7 +11,7 @@ public class EcritureFichier
     public string dest;
     public float tailleSource;
     public float tailleDest;
-    CalculTaille calculTaille = new CalculTaille();
+    CalculSize calculTaille = new CalculSize();
     public int nbFiles;
     public EcritureFichier(Sauvegarde sauvegarde)//construct a log with a source, a destination, a length and a time
     {

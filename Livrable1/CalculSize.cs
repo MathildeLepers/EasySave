@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-public class CalculTaille
+public class CalculSize
 {
     public int nbFile = 0;
     public float calculateFolderSize(string folder) //calculates the size of the directory to be backed up and starts the backup

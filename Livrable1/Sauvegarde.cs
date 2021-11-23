@@ -9,7 +9,7 @@ public class Sauvegarde
 	public float taille;
 	public string source;
 	public string dest;
-	CalculTaille calculTaille = new CalculTaille();
+	CalculSize calculTaille = new CalculSize();
 
 	public Sauvegarde(string appellationADonner, string source, string dest)
 	{
