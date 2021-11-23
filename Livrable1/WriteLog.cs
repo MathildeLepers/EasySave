@@ -11,7 +11,6 @@ public class WriteLog //class which write the logs
     public string source; 
     public string dest;
     public double sizeSource;
-    public CalculTime calculTime;
     public double time;
     List<JSON> listJSON = new List<JSON>();
 
@@ -21,15 +20,14 @@ public class WriteLog //class which write the logs
         this.source = this.backup.source;
         this.dest = this.backup.dest;
         this.sizeSource = this.backup.taille;
-        calculTime = new CalculTime(this.backup);
-        this.time = calculTime.time;
+        this.time = this.backup.time;
     }
     public void ecrire()
     {
         try
         {
             JSON log = new JSON();
-            log.Time = this.backup.time;
+            log.Time = this.backup.date;
             log.Name = this.backup.name;
             log.Destination = this.dest;
             log.Source = this.source;

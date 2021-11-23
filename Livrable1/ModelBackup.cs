@@ -1,12 +1,19 @@
 ﻿using System;
 using System.IO;
+using System.Diagnostics;
+using System.Threading;
+
 
 public class ModelBackup
 {
     public int comp;
-    public void SauvegardeComplete(string sourceDirName, string destDirName, bool copySubDirs)    
+    public double time;
+    public void CompleteBackup(string sourceDirName, string destDirName, bool copySubDirs)    
     {
 
+        Stopwatch sw = Stopwatch.StartNew(); //start a time counter 
+        
+        
         // Get the subdirectories for the specified directory.
         DirectoryInfo dir = new DirectoryInfo(sourceDirName);
         DirectoryInfo dest = new DirectoryInfo(destDirName);
@@ -42,8 +49,10 @@ public class ModelBackup
             foreach (DirectoryInfo subdir in dirs)
             {
                 string tempPath = Path.Combine(destDirName, subdir.Name);
-                SauvegardeComplete(subdir.FullName, tempPath, copySubDirs);
+                CompleteBackup(subdir.FullName, tempPath, copySubDirs);
             }
         }
+        sw.Stop(); //stop counter 
+        this.time = sw.Elapsed.TotalMilliseconds;//stop counter and return time use to do the backup
     }
 }

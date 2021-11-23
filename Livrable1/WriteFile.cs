@@ -32,7 +32,7 @@ public class WriteFile
             try
             {
                 JSONFile log = new JSONFile();
-                log.Time = this.backup.time;
+                log.Time = this.backup.date;
                 log.Name = this.backup.name;
                 log.Destination = this.dest;
                 log.Source = this.source;
