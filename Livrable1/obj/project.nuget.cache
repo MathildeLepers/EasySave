@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O8b26AnGJhUL6E0iNe2jTKr/J+1Xa94CUhRUFpn313prZWKPEdYUA53EJa2YOG2ec0cd5zDlJt1gOMwLXr64iA==",
+  "dgSpecHash": "DnKsURDYFo51FQRKNKxVFyAkgLd0uKm+2JZxPRjK8ggyIvWtIVAX0lz/oogDQ2x4+UFdiSW89Oj9D2hQ6zq6Iw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\leper\\Documents\\CESI\\Informatique\\02-ProgrammationSysteme\\Projet\\Livrable1\\Livrable1\\Livrable1.csproj",
+  "projectFilePath": "C:\\Users\\leper\\Documents\\CESI\\Informatique\\02-ProgrammationSysteme\\Projet\\EasySave\\Livrable1\\Livrable1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leper\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
