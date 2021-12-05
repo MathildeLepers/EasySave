@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TextBlock Text="TextBlock" TextWrapping="Wrap"/>
+        <TextBlock HorizontalAlignment="Left" Margin="246,150,0,0" Text="Choose a language" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <RadioButton x:Name="FrenchButton" Content="Français" HorizontalAlignment="Left" Margin="366,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.343,-0.71" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="EnglishButton" Content="English" HorizontalAlignment="Left" Margin="454,152,0,0" VerticalAlignment="Top"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="540,149,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.597,0.169" Click="Button_Click"/>
     </Grid>
 </Window>
