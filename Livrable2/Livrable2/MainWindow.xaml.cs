@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Forms;
 
 namespace Livrable2
 {
@@ -26,16 +25,28 @@ namespace Livrable2
             InitializeComponent();
         }
 
+        public Software software;
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (EnglishButton.IsChecked == true)
+            if (FR.IsChecked == true & EN.IsChecked == true)
             {
-                MessageBox.Show("Hello.");
+                MessageBox.Show("Please choose only one language");
             }
-            else if (FrenchButton.IsChecked == true)
+            else if (FR.IsChecked == true)
             {
-                MessageBox.Show("Goodbye.");
+                MessageBox.Show("Français choisi");
+                this.software = new Software(Languages.FRANCAIS);
+                this.software.launch();
             }
+            else if (EN.IsChecked == true)
+            {
+                MessageBox.Show("English choosen");
+                this.software = new Software(Languages.ENGLISH);
+                software.launch();
+            }
+            Test.Text = this.software.nbBackup;
+            this.software.nbBackup = Select.Text;
         }
     }
 }

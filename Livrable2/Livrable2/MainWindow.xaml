@@ -7,10 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock Text="TextBlock" TextWrapping="Wrap"/>
-        <TextBlock HorizontalAlignment="Left" Margin="246,150,0,0" Text="Choose a language" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <RadioButton x:Name="FrenchButton" Content="Français" HorizontalAlignment="Left" Margin="366,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.343,-0.71" Checked="RadioButton_Checked"/>
-        <RadioButton x:Name="EnglishButton" Content="English" HorizontalAlignment="Left" Margin="454,152,0,0" VerticalAlignment="Top"/>
-        <Button Content="Ok" HorizontalAlignment="Left" Margin="540,149,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.597,0.169" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="77,51,0,0" Text="Choose a language" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <CheckBox x:Name="FR" Content="Français" HorizontalAlignment="Left" Margin="200,55,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="EN" Content="English" HorizontalAlignment="Left" Margin="287,55,0,0" VerticalAlignment="Top"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="369,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.597,0.169" Click="Button_Click"/>
+        <TextBlock x:Name="Test" HorizontalAlignment="Left" Margin="77,72,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="29"/>
+        <TextBlock x:Name="Select" HorizontalAlignment="Left" Margin="231,86,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="101"/>
+
     </Grid>
 </Window>

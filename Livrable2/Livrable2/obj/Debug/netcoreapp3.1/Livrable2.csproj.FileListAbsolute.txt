@@ -20,3 +20,4 @@ C:\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Projet\Livrab
 C:\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Projet\Livrable2\Livrable2\obj\Debug\netcoreapp3.1\Livrable2.genruntimeconfig.cache
 C:\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Projet\Livrable2\Livrable2\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Projet\Livrable2\Livrable2\obj\Debug\netcoreapp3.1\Livrable2.csproj.CopyComplete
+C:\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Projet\Livrable2\Livrable2\bin\Debug\netcoreapp3.1\System.Reactive.Windows.Forms.dll
