@@ -6,8 +6,8 @@
       "version": "3.1.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\leper\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\leper\\.nuget\\packages",
+      "C:\\Users\\juba dahoumane\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\juba dahoumane\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
