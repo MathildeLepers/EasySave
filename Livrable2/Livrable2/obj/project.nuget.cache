@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "1Ve02nKLffC9laVIuVmkxkaiTOpu+ePRWbNAHv2l5ZAxrfDJXJ218BPlJwwJWuCZmDHmosqSDx3cXG7cfN4uYA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\juba dahoumane\\RiderProjects\\EasySave\\Livrable2\\Livrable2\\Livrable2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\juba dahoumane\\.nuget\\packages\\ookii.dialogs.wpf\\5.0.0\\ookii.dialogs.wpf.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

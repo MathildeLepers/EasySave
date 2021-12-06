@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Livrable1"
+    "\\Livrable2",
+    "\\Livrable2\\Livrable2"
   ],
+  "SelectedNode": "\\Livrable2\\Livrable2\\MainWindow.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

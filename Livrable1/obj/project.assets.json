@@ -48,23 +48,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leper\\.nuget\\packages\\": {},
+    "C:\\Users\\juba dahoumane\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leper\\Documents\\CESI\\Informatique\\02-ProgrammationSysteme\\Projet\\EasySave\\Livrable1\\Livrable1.csproj",
+      "projectUniqueName": "C:\\Users\\juba dahoumane\\RiderProjects\\EasySave\\Livrable1\\Livrable1.csproj",
       "projectName": "Livrable1",
-      "projectPath": "C:\\Users\\leper\\Documents\\CESI\\Informatique\\02-ProgrammationSysteme\\Projet\\EasySave\\Livrable1\\Livrable1.csproj",
-      "packagesPath": "C:\\Users\\leper\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leper\\Documents\\CESI\\Informatique\\02-ProgrammationSysteme\\Projet\\EasySave\\Livrable1\\obj\\",
+      "projectPath": "C:\\Users\\juba dahoumane\\RiderProjects\\EasySave\\Livrable1\\Livrable1.csproj",
+      "packagesPath": "C:\\Users\\juba dahoumane\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\juba dahoumane\\RiderProjects\\EasySave\\Livrable1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\leper\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\juba dahoumane\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
