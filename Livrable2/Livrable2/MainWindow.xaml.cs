@@ -24,5 +24,19 @@ namespace Livrable2
         {
             InitializeComponent();
         }
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Window1 gg = new Window1();
+            gg.Show();
+            this.Close();
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Window2 g = new Window2();
+            g.Show();
+            this.Close();
+        }
     }
 }
